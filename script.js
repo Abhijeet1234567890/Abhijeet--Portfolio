@@ -1,30 +1,25 @@
-// Typing Effect
-const text = ["Full Stack Web Developer", "React & Node.js Enthusiast", "Creative Problem Solver"];
-let index = 0;
-let charIndex = 0;
-const typingElement = document.querySelector(".typing");
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
 
-function type() {
-  if (charIndex < text[index].length) {
-    typingElement.textContent += text[index].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, 100);
+const text = ["Full Stack Developer", "MERN Enthusiast", "Computer Engineer"];
+let i = 0, j = 0, current = "", isDeleting = false;
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+  current = text[i];
+  typing.textContent = isDeleting
+    ? current.substring(0, j--)
+    : current.substring(0, j++);
+
+  if (!isDeleting && j === current.length + 1) {
+    isDeleting = true;
+    setTimeout(typeEffect, 1500);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+    setTimeout(typeEffect, 400);
   } else {
-    setTimeout(erase, 2000);
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
   }
 }
-
-function erase() {
-  if (charIndex > 0) {
-    typingElement.textContent = text[index].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 50);
-  } else {
-    index = (index + 1) % text.length;
-    setTimeout(type, 500);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  type();
-});
+typeEffect();

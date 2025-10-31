@@ -2,98 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhijeet G | Computer Engineer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhijeet Gajadhane | Computer Engineer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <header class="navbar">
-    <h1 class="logo">Abhijeet Gajadhane</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="container nav-inner">
+      <h1 class="logo">Abhijeet <span>Gajadhane</span></h1>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn-outline" href="Abhijeet_Resume.pdf" download>Resume</a>
+    </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-      <div class="hero-text">
-        <h2>Hi, I'm <span class="highlight">Abhijeet</span></h2>
-        <h3 class="typing"></h3>
-        <p>
-          I’m a <strong>Full Stack Web Developer Intern</strong> currently pursuing a
-          <strong>B.Tech degree in Computer Engineering (4th Year)</strong>.
-          I specialize in <strong>HTML, CSS, JavaScript, React.js, Node.js, MongoDB, and MySQL</strong>.
+  <!-- HERO -->
+  <section id="home" class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h2 class="hello">👋 Hi, I'm <span class="name">Abhijeet</span></h2>
+        <h3 class="role"><span id="typing"></span><span class="cursor">|</span></h3>
+        <p class="lead">
+          A passionate <strong>Full Stack Web Developer</strong> crafting interactive and scalable web experiences using modern technologies.
         </p>
-        <p>
-          Passionate about creating efficient, scalable, and interactive web applications
-          while continuously learning new technologies.
-        </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn">Explore My Work</a>
+          <a href="Abhijeet_Resume.pdf" class="btn-muted" download>Download Resume</a>
+        </div>
+        <div class="social-row">
+          <a href="https://github.com/" target="_blank" class="social">🐙</a>
+          <a href="https://linkedin.com/" target="_blank" class="social">💼</a>
+          <a href="mailto:gajadhanetathaget@gmail.com" class="social">✉️</a>
+        </div>
       </div>
 
-      <div class="hero-photo">
-        <!-- 🔹 Add your photo here -->
-        <img src="images/Abhijeet .jpg" alt="Abhijeet Gajadhane" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <h3>Madhavi's Coffee Shop</h3>
-        <p>
-          A responsive single-page coffee shop web app using HTML, CSS, JavaScript, and Bootstrap.
-          Includes product listing, animations, reviews, and ordering features.
-        </p>
-      </div>
-      <div class="project-card">
-        <h3>Court Data Fetcher & Mini Dashboard</h3>
-        <p>
-          A Node.js + React.js-based web tool to fetch and visualize Indian court data,
-          integrated with MongoDB for backend storage.
-        </p>
-      </div>
-      <div class="project-card">
-        <h3>Smart Traffic Analyzer</h3>
-        <p>
-          Real-time traffic monitoring using Computer Vision and YOLOv5 for vehicle detection.
-        </p>
+      <div class="hero-right">
+        <div class="photo-card">
+          <img src="Abhijeet .jpg" alt="Abhijeet Gajadhane" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-list">
-      <span>HTML</span><span>CSS</span><span>JavaScript</span>
-      <span>React.js</span><span>Node.js</span><span>MongoDB</span>
-      <span>MySQL</span><span>Python</span><span>C/C++</span>
-      <span>Git & GitHub</span><span>Linux</span><span>UI/UX Design</span>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm a <strong>B.Tech Computer Engineering</strong> student passionate about building dynamic, user-friendly, and visually elegant web applications.
+        </p>
+        <p>
+          I enjoy working with React, Node.js, and databases — turning creative ideas into working digital experiences.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card"><h3>4+</h3><p>Projects Completed</p></div>
+        <div class="stat-card"><h3>3+</h3><p>Internships</p></div>
+        <div class="stat-card"><h3>4th Year</h3><p>B.Tech in CSE</p></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact Me</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Madhavi's Coffee Shop ☕</h3>
+          <p>A single-page coffee shop web app using HTML, CSS, JS & Bootstrap — featuring smooth UI and responsive layout.</p>
+        </div>
+        <div class="project-card">
+          <h3>Messwala Webaaplication 😋</h3>
+          <p>A Node.js + React.js In This Project There Are two Login Messwala and Teefinwala Then Teefinwala use The Monthly Subcription for Joining Mess. Also Use The Teefinwala Customization Feature for Order Teefine   .</p>
+        </div>
+        <div class="project-card">
+          <h3>Gate Prepration  🚗</h3>
+          <p>Using Adroid appliction Using This application Student Are Preper The Get Exam.</p>
+        </div>
+          <div class="project-card">
+          <h3>Collage Event Management  🚗</h3>
+          <p>Using PHP In this project Manage The Collage All Events And Collage Photos .</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Abhijeet Gajadhane | Computer Engineer Portfolio</p>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">JavaScript</div>
+        <div class="skill-pill">React.js</div>
+        <div class="skill-pill">Node.js</div>
+        <div class="skill-pill">MongoDB</div>
+        <div class="skill-pill">MySQL</div>
+        <div class="skill-pill">C/C++</div>
+        <div class="skill-pill">PostMan</div>
+        <div class="skill-pill">Github</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Abhijeet Gajadhane • Designed with ❤️ and Code</p>
   </footer>
 
   <script src="script.js"></script>
